@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 24px;
+  font-family: Arial, sans-serif;
+  color: #102a43;
+  background: linear-gradient(135deg, #b9e6fe, #7cc4f5);
+  transition: background 0.4s ease;
+}
+
+body.yagmurlu { background: linear-gradient(135deg, #9aaebd, #516b7a); }
+body.bulutlu { background: linear-gradient(135deg, #d4dde5, #91a3b0); }
+body.karli { background: linear-gradient(135deg, #e9f4f8, #b7d4e6); }
+
+.kart {
+  width: min(100%, 430px);
+  padding: 32px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(16, 42, 67, 0.2);
+}
+
+h1 {
+  margin: 0;
+}
+
+.aciklama {
+  color: #486581;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+  margin: 24px 0 8px;
+}
+
+input,
+button {
+  border: 0;
+  border-radius: 10px;
+  font: inherit;
+  padding: 12px;
+}
+
+input {
+  width: 100%;
+  background: #eaf4fb;
+}
+
+button {
+  cursor: pointer;
+  color: white;
+  background: #1478b8;
+}
+
+button:hover {
+  background: #0d6098;
+}
+
+.kontroller {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: #486581;
+  font-size: 13px;
+}
+
+.kontroller button,
+.kontroller select {
+  padding: 7px 9px;
+}
+
+.kontroller select {
+  border: 1px solid #bcccdc;
+  border-radius: 7px;
+  color: #102a43;
+  background: white;
+}
+
+.mesaj {
+  min-height: 24px;
+  color: #b42318;
+}
+
+.ana-bilgi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 48px;
+}
+
+#sicaklik {
+  font-size: 42px;
+}
+
+.detaylar {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  color: #486581;
+}
+
+.tahmin-alani,
+.gecmis-alani {
+  margin-top: 26px;
+  border-top: 1px solid #d9e2ec;
+}
+
+.tahmin {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 7px;
+}
+
+.gun {
+  padding: 9px 4px;
+  border-radius: 10px;
+  background: #eaf4fb;
+  font-size: 13px;
+}
+
+.gun p {
+  margin: 5px 0;
+}
+
+.gun .hava-emoji {
+  font-size: 22px;
+}
+
+.gecmis {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.gecmis button {
+  padding: 7px 10px;
+  background: #486581;
+  font-size: 13px;
+}
+
+.gizli {
+  display: none;
+}

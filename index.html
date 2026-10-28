@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hava Durumu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="kart">
+    <h1>Hava Durumu</h1>
+    <p class="aciklama">Bir şehir yaz ve güncel hava durumunu öğren.</p>
+
+    <form id="arama-formu">
+      <label class="gizli" for="sehir">Şehir adı</label>
+      <input id="sehir" type="text" placeholder="Örnek: İstanbul" autocomplete="off" required />
+      <button type="submit">Ara</button>
+    </form>
+    <div class="kontroller">
+      <button id="konum-butonu" type="button">📍 Konumumu kullan</button>
+      <label for="birim">Sıcaklık birimi:</label>
+      <select id="birim">
+        <option value="C">°C</option>
+        <option value="F">°F</option>
+      </select>
+    </div>
+
+    <p id="mesaj" class="mesaj" aria-live="polite"></p>
+
+    <section id="sonuc" class="sonuc gizli" aria-live="polite">
+      <h2 id="sehir-adi"></h2>
+      <div class="ana-bilgi">
+        <span id="ikon" aria-hidden="true">☀️</span>
+        <strong id="sicaklik"></strong>
+      </div>
+      <p id="durum"></p>
+      <div class="detaylar">
+        <p>💧 Nem: <span id="nem"></span></p>
+        <p>💨 Rüzgâr: <span id="ruzgar"></span></p>
+      </div>
+
+      <div class="tahmin-alani">
+        <h3>5 günlük tahmin</h3>
+        <div id="tahmin" class="tahmin"></div>
+      </div>
+    </section>
+
+    <section id="gecmis-alani" class="gecmis-alani gizli">
+      <h3>Son aramalar</h3>
+      <div id="gecmis" class="gecmis"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
